@@ -1,8 +1,3 @@
-/*
-We want to display a simple alert when the button with id #sidebar-button is clicked
+// we want to fill in the input field like this, when the sidebar button is clicked:
 
-alert('content script executed!');
-
-*/
-
-document.querySelector('[name="username"]').value="Daniel345"
+//document.querySelector('[name="username"]').value="myusername"
