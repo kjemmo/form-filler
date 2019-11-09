@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "Test extension",
+  "version": "1.0",
+  "description": "To test proof of concept",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "test@extension.com"
+    }
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-scripts/content.js"]
+    }
+  ],
+
+  "sidebar_action": {
+    "default_title": "Test sidebar",
+    "default_panel": "sidebar/sidebar.html",
+    "open_at_install":true,
+    "browser_style": false
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "storage",
+    "notifications"
+  ],
+
+
+  "commands": {
+  // shortcut to open sidebar
+  "_execute_sidebar_action": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+O"
+    }
+  }
+}
+
+
+}
